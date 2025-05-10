@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.page-control {
+    position: fixed;
+    z-index: 500;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    
+}
+
+    .page-control_next{
+        width: 240px;
+        height: 40%;
+        right: 0;
+        top: 30%;
+    }
+
+    .page-control_prev{
+        width: 240px;
+        height: 40%;
+        left: 0;
+        top: 30%;
+    }
+
+    .page-control_arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* cursor: pointer; */
+        height: 100%;
+        width: 100%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        transition: transform 0.1s;
+        
+        
+    }
+
+    .page-control_arrow-top, .page-control_arrow-bottom {
+        background-color: #666;
+        height: 2.5px;
+        /* left: -5px; */
+        position: absolute;
+        top: 50%;
+        width: 2.5em;
+    }
+
+        .page-control_arrow-top--next {
+            transform: rotate(45deg);
+            transform-origin: bottom right;
+        }
+
+        .page-control_arrow-bottom--next {
+            transform: rotate(-45deg);
+            transform-origin: top right;
+        }
+
+        .page-control_arrow-top--prev {
+            transform: rotate(45deg); 
+            transform-origin: top left; 
+            
+        }
+
+        .page-control_arrow-bottom--prev {
+            transform: rotate(-45deg); 
+            transform-origin: bottom left; 
+        }
+
+        
+
+    .page-control_arrow-top:after, .page-control_arrow-bottom:after {
+        background-color: #999;
+        content: "";
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transition: all 0.15s;
+    }  
+
+        .page-control_arrow-top--next:after {
+            left: 100%;
+            right: 0;
+            transition-delay: 0s;
+        }
+
+        .page-control_arrow-bottom--next:after {
+            left: 0;
+            right: 100%;
+            transition-delay: 0.15s;
+        }
+
+        .page-control_arrow-top--prev:after {
+            left: 100%;
+            right: 0;
+            transition-delay: 0.15s;
+        }
+
+        .page-control_arrow-bottom--prev:after {
+            left: 0;
+            right: 100%;
+            transition-delay: 0s;
+        }
+
+    .page-control_arrow:hover .page-control_arrow-top--next:after {
+        left: 0;
+        transition-delay: 0.15s;
+    }
+
+
+    .page-control_arrow:hover .page-control_arrow-bottom--next:after {
+        right: 0;
+        transition-delay: 0s;
+    }
+
+        .page-control_arrow:hover .page-control_arrow-top--prev:after {
+            left: 0;
+            transition-delay: 0s;
+        }
+
+
+        .page-control_arrow:hover .page-control_arrow-bottom--prev:after {
+            right: 0;
+            transition-delay: 0.15s;
+        }
+
+    .page-control_arrow:active {
+        transform: translateX(-50%) translateY(-50%) scale(0.9);
+    }
+
+
+.page-control_next:hover span{
+    opacity: 1;
+    transform: translate3d(-30px,0,0);
+}
+
+.page-control_prev:hover span{
+    opacity: 1;
+    transform: translate3d(30px,0,0);
+}
+
+.page-control_next span{
+    right: calc(40% + 5px);
+    
+}
+
+.page-control_prev span{
+    left: calc(40% + 5px);
+    
+}
+
+.page-control span {
+    color: #aaaaaa;
+    position: absolute;
+    white-space: nowrap;
+    top: calc(50% - 15.5px);
+    line-height: 30px;
+    padding: 0 10px;
+    opacity: 0;
+    margin: auto;
+    text-transform: lowercase;
+    font-size: 1.2em;
+    line-height: 1.7em;
+    transition: opacity 0.15s ease .125s,transform .3s cubic-bezier(0,0,0,1) .125s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}

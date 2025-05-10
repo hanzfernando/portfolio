@@ -1,26 +1,119 @@
 [
     {
-      "id": 1,
-      "title": "Handmade Crochet Shop",
-      "shortDescription": "A custom MERN e-commerce site for handmade products.",
-      "description":
-        "Built with MongoDB, Express, React, and Node.js. Includes user auth, admin controls, and a made-to-order cart system.",
-      "link": "#"
+        "id": 1,
+        "title": "TicketFlare - Event Management System",
+        "tags": ["Web", "ASP.Net Core", "C#", "MySQL"],
+        "thumbnail": "",
+        "images": [],
+        "shortDescription": "A web-based event management system for school events, allowing organizations to create events and users to register.",
+        "description": "This web-based application enables organizations to create and manage events while allowing users to register. It includes features such as event creation, user registration, and viewing registrants for each event.",
+        "learningPoints": [
+        "Gained practical experience with ASP.Net Core for web application development.",
+        "Applied MySQL for efficient data storage and management.",
+        "Implemented user authentication, authorization, and role-based access control.",
+        "Learned to develop and manage a registration flow for event systems.",
+        "Collaborated with a teammate to connect backend and frontend components.",
+        "Applied MVC architecture principles within ASP.Net Core."
+        ],
+        "link": "#"
     },
     {
-      "id": 2,
-      "title": "React Portfolio Site",
-      "shortDescription": "My personal portfolio using React and Tailwind.",
-      "description":
-        "Features animated transitions, responsive layouts, and project showcase. Fully built from scratch.",
-      "link": "#"
+        "id": 2,
+        "title": "AMISCOSA - Sales and Inventory System",
+        "tags": ["Desktop", "ASP.Net Core", "C#", "MySQL"],
+        "thumbnail": "",
+        "images": [],
+        "shortDescription": "A desktop application for managing sales transactions and inventory tracking.",
+        "description": "This desktop-based system manages inventory and sales processes. It features inventory tracking, sales recording, and low-stock notifications to help manage product availability efficiently.",
+        "learningPoints": [
+        "Expanded knowledge of ASP.Net Core applied in desktop applications.",
+        "Strengthened proficiency in MySQL for inventory-related data handling.",
+        "Improved collaboration skills by working on the frontend while another developer handled backend integration."
+        ],
+        "link": "#"
     },
     {
-      "id": 3,
-      "title": "Student Grading System",
-      "shortDescription": "Grading system using C# and MySQL.",
-      "description":
-        "This desktop app handles record management, GPA calculations, and user roles.",
-      "link": "#"
+        "id": 3,
+        "title": "Gabay: A Local-based Travel Expenditure Log",
+        "tags": ["Android", "Java", "XML", "Firebase"],
+        "thumbnail": "",
+        "images": [],
+        "shortDescription": "An Android app that helps users log and categorize travel expenses.",
+        "description": "This Android application allows users to monitor their travel-related spending. Key features include expense tracking, budgeting, expense categorization, and viewing summaries for better financial management.",
+        "learningPoints": [
+        "Learned Android development using Java and XML.",
+        "Gained experience integrating Firebase for backend services and data storage.",
+        "Designed and implemented a user-friendly UI for tracking expenses.",
+        "Worked closely with a teammate to synchronize backend and frontend workflows."
+        ],
+        "link": "#"
+    },
+    {
+        "id": 4,
+        "title": "Co's Crocket Shop",
+        "tags": ["Web", "MongoDB", "Express", "Node.js", "React"],
+        "thumbnail": "",
+        "images": [],
+        "shortDescription": "An e-commerce website for selling made-to-order crochet products, built using the MERN stack.",
+        "description": "This e-commerce platform is built with the MERN stack and features user authentication, admin controls for managing content, and a cart system specifically designed for made-to-order products.",
+        "learningPoints": [
+        "Learned full-stack development using the MERN stack.",
+        "Implemented secure authentication and role-based access control.",
+        "Built a functional and customized cart system for made-to-order products."
+        ],
+        "link": "#"
+    },
+    {
+        "id": 7,
+        "title": "Document Template Builder",
+        "tags": ["Web", "MongoDB", "Express", "Node.js", "React", "TinyMCE"],
+        "thumbnail": "",
+        "images": [],
+        "shortDescription": "A role-based document template builder styled like MS Word, with editable fields and export functionality.",
+        "description": "A MERN stack web application that enables organizations to create and manage document templates through a customized TinyMCE editor designed to resemble a simplified Microsoft Word. The system includes a multi-level role structure where a system admin can create organizations and assign organization-specific admins. These admins can manage student accounts within their organization. Templates can be configured to be fully editable or restrict editing to specific fields. Users can view templates assigned to their school and export completed documents as PDFs with preserved styling.",
+        "learningPoints": [
+            "Customized TinyMCE to mimic a simplified MS Word for an intuitive document editing experience.",
+            "Built a role-based access system with system admin, organization admins, and student accounts.",
+            "Implemented field-level editing control within templates for granular access.",
+            "Enabled export to PDF using styled output consistent with the in-editor formatting.",
+            "Designed multi-organization support with scoped data access for templates and users.",
+            "Enhanced frontend state management to handle dynamic editable regions in documents."
+        ],
+        "link": "#"
+    },
+    {
+        "id": 6,
+        "title": "WorkWell WebApp - Admin",
+        "tags": ["Web", "ReactJS", "ASP.Net Core", "Firebase"],
+        "thumbnail": "",
+        "images": [],
+        "shortDescription": "A web platform for managing patient records and assigning exercise routines.",
+        "description": "This web-based admin panel allows healthcare providers to manage patient records and assign custom exercise routines. It supports features like user management, exercise calibration using MediaPipe Pose Landmark, routine creation, and access to uploaded exercise session videos via Cloudinary.",
+        "learningPoints": [
+        "Enhanced skills in ReactJS and integrated it with an ASP.Net Core backend.",
+        "Used Firebase Auth and Firestore for authentication and data handling.",
+        "Integrated Cloudinary for efficient video storage and retrieval.",
+        "Applied JWT for secure authentication and authorization.",
+        "Implemented local storage to maintain user sessions with tokens."
+        ],
+        "link": "#"
+    },
+    {
+        "id": 7,
+        "title": "WorkWell WebApp - Patient",
+        "tags": ["Android", "Java", "XML", "Firebase"],
+        "thumbnail": "",
+        "images": [],
+        "shortDescription": "An Android app for patients to view, perform, and review their assigned exercise routines.",
+        "description": "This Android application serves as a companion to the WorkWell admin panel. It allows patients to access assigned exercise routines, perform them with real-time monitoring using MediaPipe Pose Landmark, and review previous session videos stored on Cloudinary.",
+        "learningPoints": [
+        "Strengthened Android development skills using Java and XML.",
+        "Gained hands-on experience with Firebase Auth and Firestore for user and data management.",
+        "Assisted in integrating MediaPipe Pose Landmark Detection for real-time monitoring.",
+        "Collaborated with a developer to successfully integrate pose detection into the application."
+        ],
+        "link": "#"
     }
+    
+    
 ]

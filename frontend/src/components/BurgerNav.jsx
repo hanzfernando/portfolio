@@ -10,13 +10,14 @@ const BurgerNav = () => {
     return (
         <>
             {/* Burger Icon */}
-            <div className="fixed top-12 right-20 z-50 cursor-pointer" onClick={toggleMenu}>
-                <div className={`w-8 h-1 bg-white transition-transform origin-left ${isOpen ? 'rotate-45 translate-y-1' : ''} dark:bg-gray-300`} />
-                <div className={`w-8 h-1 bg-white mt-1 transition-transform origin-left ${isOpen ? '-rotate-45 -translate-y-1' : ''} dark:bg-gray-300`} />
+            <div className="fixed top-12 right-20 z-1100 cursor-pointer" onClick={toggleMenu}>
+                <div className={`w-8 h-1 bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''} dark:bg-gray-300`} />
+                <div className={`w-8 h-1 bg-white mt-2 transition-all duration-300 ${isOpen ? 'hidden mt-3 ' : ''} dark:bg-gray-300`} />
+                <div className={`w-8 h-1 bg-white mt-2 transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2 mt-3 ' : ''} dark:bg-gray-300`} />
             </div>
 
             {/* Overlay Menu */}
-            <div className={`fixed top-0 left-0 w-full h-screen bg-neutral-800 flex flex-col justify-center items-center gap-8 z-40 transition-transform duration-500 ${isOpen ? "translate-y-0" : "-translate-y-full"} dark:bg-neutral-900`}>
+            <div className={`fixed top-0 left-0 w-full h-screen bg-neutral-800 flex flex-col justify-center items-center gap-8 z-1000 transition-transform duration-500 ${isOpen ? "translate-y-0" : "-translate-y-full"} dark:bg-neutral-900`}>
                 <Link
                     to="/about"
                     onClick={() => setIsOpen(false)}

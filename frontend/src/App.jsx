@@ -4,6 +4,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, N
 // Page imports
 import AboutPage from "./pages/AboutPage.jsx"
 import ProjectsPage from "./pages/ProjectsPage.jsx"
+import ContactPage from "./pages/ContactPage.jsx"
 
 const App = () => {
     const router = createBrowserRouter(
@@ -12,6 +13,7 @@ const App = () => {
                 <Route path="/" element={<AboutPage />} />
                 <Route path="/about" element={ <AboutPage />} />
                 <Route path="/projects" element={ <ProjectsPage />} />
+                <Route path="/contact" element={ <ContactPage />} />
             </Route>
         )
     )

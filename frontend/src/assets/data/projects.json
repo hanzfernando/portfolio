@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "title": "Handmade Crochet Shop",
+      "shortDescription": "A custom MERN e-commerce site for handmade products.",
+      "description":
+        "Built with MongoDB, Express, React, and Node.js. Includes user auth, admin controls, and a made-to-order cart system.",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "title": "React Portfolio Site",
+      "shortDescription": "My personal portfolio using React and Tailwind.",
+      "description":
+        "Features animated transitions, responsive layouts, and project showcase. Fully built from scratch.",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "title": "Student Grading System",
+      "shortDescription": "Grading system using C# and MySQL.",
+      "description":
+        "This desktop app handles record management, GPA calculations, and user roles.",
+      "link": "#"
+    }
+]

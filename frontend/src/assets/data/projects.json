@@ -88,13 +88,15 @@
         "thumbnail": "/img_showcase/img_showcase-workwell-web.png",
         "images": [],
         "shortDescription": "A web platform for managing patient records and assigning exercise routines.",
-        "description": "This web-based admin panel allows healthcare providers to manage patient records and assign custom exercise routines. It supports features like user management, exercise calibration using MediaPipe Pose Landmark, routine creation, and access to uploaded exercise session videos via Cloudinary.",
+        "description": "This web-based admin panel allows healthcare providers to manage patient records and assign custom exercise routines. It supports features like user management, exercise calibration using MediaPipe Pose Landmark, routine creation, and access to uploaded exercise session videos via Cloudinary. The project is hosted on Render, with the frontend deployed as a static site and the backend running as a web service.",
         "learningPoints": [
         "Enhanced skills in React and integrated it with an ASP.Net Core backend.",
         "Used Firebase Auth and Firestore for authentication and data handling.",
         "Integrated Cloudinary for efficient video storage and retrieval.",
         "Applied JWT for secure authentication and authorization.",
-        "Implemented local storage to maintain user sessions with tokens."
+        "Implemented local storage to maintain user sessions with tokens.",
+        "Deployed frontend as a static site and backend as a web service using Render.",
+        "Collaborated with a developer to integrate MediaPipe Pose Landmark Detection for exercise calibration."
         ],
         "link": "https://workwell-client.onrender.com/"
     },

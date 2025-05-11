@@ -42,7 +42,7 @@ const ContactPage = () => {
     return (
         <>
             <BurgerNav />
-            <div className="w-[90%] max-w-6xl mx-auto pt-32 pb-20">
+           <div className="w-[70%] max-w-4xl mx-auto pt-32 pb-20">
                 <h1 className="text-3xl font-bold text-center text-[#c5c5c5]">
                 Contact Me
                 </h1>

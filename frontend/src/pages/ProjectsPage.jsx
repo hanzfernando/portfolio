@@ -39,7 +39,7 @@ const ProjectsPage = () => {
   return (
     <>
         <BurgerNav />
-        <div className="w-[90%] max-w-6xl mx-auto pt-32 pb-20">
+        <div className="w-[70%] max-w-4xl mx-auto pt-32 pb-20">
             <div className="mb-8 px-5">
             <h1 className="font-bold text-4xl tracking-tight text-[#c5c5c5]">
                 Software Development Portfolio

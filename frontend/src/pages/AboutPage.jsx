@@ -33,8 +33,9 @@ const AboutPage = () => {
 
 
             </div>
-
-            <PageNavigation nextPage={'/projects'} nextPageName={'projects'} className="block [@media(min-width:1400px)]:hidden"/>
+            <div className="hide-on-small">
+                <PageNavigation nextPage={'/projects'} nextPageName={'projects'} className="block [@media(min-width:1400px)]:hidden"/>
+            </div>
         </>
     )
 }

@@ -24,9 +24,9 @@ const AboutPage = () => {
                     </Link>{' '}
                     to get a sense of my work.<br />
                     I am available from UTC-5 to UTC-10.{' '}
-                    <a href="mailto:fernandohanz23@gmail.com" className="font-bold no-underline text-[#c5c5c5]">
+                    <span className="font-bold no-underline text-[#c5c5c5]">
                         fernandohanz23@gmail.com
-                    </a>
+                    </span>
 
 
                 </p>

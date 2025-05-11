@@ -1,8 +1,12 @@
 import React from 'react'
-
+import PageNavigation from '../components/PageNavigation'
+import BurgerNav from '../components/BurgerNav'
 const ContactPage = () => {
   return (
-    <div>ContactPage</div>
+    <>
+        <BurgerNav />
+        <PageNavigation prevPageName={'projects'} previousPage={'/projects'}/>
+    </>
   )
 }
 

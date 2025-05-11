@@ -3,7 +3,7 @@
         "id": 1,
         "title": "TicketFlare - Event Management System",
         "tags": ["Web", "ASP.Net Core", "C#", "MySQL"],
-        "thumbnail": "",
+        "thumbnail": "/img_showcase/img_showcase-ticketflare.png",
         "images": [],
         "shortDescription": "A web-based event management system for school events, allowing organizations to create events and users to register.",
         "description": "This web-based application enables organizations to create and manage events while allowing users to register. It includes features such as event creation, user registration, and viewing registrants for each event.",
@@ -15,13 +15,13 @@
         "Collaborated with a teammate to connect backend and frontend components.",
         "Applied MVC architecture principles within ASP.Net Core."
         ],
-        "link": "#"
+        "link": ""
     },
     {
         "id": 2,
         "title": "AMISCOSA - Sales and Inventory System",
-        "tags": ["Desktop", "ASP.Net Core", "C#", "MySQL"],
-        "thumbnail": "",
+        "tags": ["Web", "ASP.Net Core", "C#", "MySQL"],
+        "thumbnail": "/img_showcase/img_showcase-amiscosa.png",
         "images": [],
         "shortDescription": "A desktop application for managing sales transactions and inventory tracking.",
         "description": "This desktop-based system manages inventory and sales processes. It features inventory tracking, sales recording, and low-stock notifications to help manage product availability efficiently.",
@@ -30,13 +30,13 @@
         "Strengthened proficiency in MySQL for inventory-related data handling.",
         "Improved collaboration skills by working on the frontend while another developer handled backend integration."
         ],
-        "link": "#"
+        "link": ""
     },
     {
         "id": 3,
         "title": "Gabay: A Local-based Travel Expenditure Log",
         "tags": ["Android", "Java", "XML", "Firebase"],
-        "thumbnail": "",
+        "thumbnail": "/img_showcase/img_showcase-gabay.png",
         "images": [],
         "shortDescription": "An Android app that helps users log and categorize travel expenses.",
         "description": "This Android application allows users to monitor their travel-related spending. Key features include expense tracking, budgeting, expense categorization, and viewing summaries for better financial management.",
@@ -46,13 +46,13 @@
         "Designed and implemented a user-friendly UI for tracking expenses.",
         "Worked closely with a teammate to synchronize backend and frontend workflows."
         ],
-        "link": "#"
+        "link": ""
     },
     {
         "id": 4,
         "title": "Co's Crocket Shop",
         "tags": ["Web", "MongoDB", "Express", "Node.js", "React"],
-        "thumbnail": "",
+        "thumbnail": "/img_showcase/img_showcase-coscrochet.png",
         "images": [],
         "shortDescription": "An e-commerce website for selling made-to-order crochet products, built using the MERN stack.",
         "description": "This e-commerce platform is built with the MERN stack and features user authentication, admin controls for managing content, and a cart system specifically designed for made-to-order products.",
@@ -61,13 +61,13 @@
         "Implemented secure authentication and role-based access control.",
         "Built a functional and customized cart system for made-to-order products."
         ],
-        "link": "#"
+        "link": ""
     },
     {
         "id": 7,
         "title": "Document Template Builder",
-        "tags": ["Web", "MongoDB", "Express", "Node.js", "React", "TinyMCE"],
-        "thumbnail": "",
+        "tags": ["Web", "MongoDB", "Express", "Node.js", "React"],
+        "thumbnail": "/img_showcase/img_showcase-docbuilder.png",
         "images": [],
         "shortDescription": "A role-based document template builder styled like MS Word, with editable fields and export functionality.",
         "description": "A MERN stack web application that enables organizations to create and manage document templates through a customized TinyMCE editor designed to resemble a simplified Microsoft Word. The system includes a multi-level role structure where a system admin can create organizations and assign organization-specific admins. These admins can manage student accounts within their organization. Templates can be configured to be fully editable or restrict editing to specific fields. Users can view templates assigned to their school and export completed documents as PDFs with preserved styling.",
@@ -79,30 +79,30 @@
             "Designed multi-organization support with scoped data access for templates and users.",
             "Enhanced frontend state management to handle dynamic editable regions in documents."
         ],
-        "link": "#"
+        "link": ""
     },
     {
         "id": 6,
-        "title": "WorkWell WebApp - Admin",
-        "tags": ["Web", "ReactJS", "ASP.Net Core", "Firebase"],
-        "thumbnail": "",
+        "title": "WorkWell WebApp - Web",
+        "tags": ["Web", "React", "ASP.Net Core", "Firebase"],
+        "thumbnail": "/img_showcase/img_showcase-workwell-web.png",
         "images": [],
         "shortDescription": "A web platform for managing patient records and assigning exercise routines.",
         "description": "This web-based admin panel allows healthcare providers to manage patient records and assign custom exercise routines. It supports features like user management, exercise calibration using MediaPipe Pose Landmark, routine creation, and access to uploaded exercise session videos via Cloudinary.",
         "learningPoints": [
-        "Enhanced skills in ReactJS and integrated it with an ASP.Net Core backend.",
+        "Enhanced skills in React and integrated it with an ASP.Net Core backend.",
         "Used Firebase Auth and Firestore for authentication and data handling.",
         "Integrated Cloudinary for efficient video storage and retrieval.",
         "Applied JWT for secure authentication and authorization.",
         "Implemented local storage to maintain user sessions with tokens."
         ],
-        "link": "#"
+        "link": "https://workwell-client.onrender.com/"
     },
     {
         "id": 7,
-        "title": "WorkWell WebApp - Patient",
+        "title": "WorkWell WebApp - Android",
         "tags": ["Android", "Java", "XML", "Firebase"],
-        "thumbnail": "",
+        "thumbnail": "/img_showcase/img_showcase-workwell-android.png",
         "images": [],
         "shortDescription": "An Android app for patients to view, perform, and review their assigned exercise routines.",
         "description": "This Android application serves as a companion to the WorkWell admin panel. It allows patients to access assigned exercise routines, perform them with real-time monitoring using MediaPipe Pose Landmark, and review previous session videos stored on Cloudinary.",
@@ -112,7 +112,7 @@
         "Assisted in integrating MediaPipe Pose Landmark Detection for real-time monitoring.",
         "Collaborated with a developer to successfully integrate pose detection into the application."
         ],
-        "link": "#"
+        "link": "https://workwell-client.onrender.com/"
     }
     
     

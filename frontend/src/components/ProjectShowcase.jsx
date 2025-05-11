@@ -52,7 +52,7 @@ const ProjectShowcase = ({ projects }) => {
       {selectedProject ? (
         <div className="flex border-t border-gray-700 min-h-[70vh]">
             {/* Left panel - project list */}
-            <div className="min-w-[250px] w-1/3 border-r border-gray-700 overflow-y-auto p-8 space-y-4 max-h-[calc(100vh-8rem)]">
+            <div className="min-w-[250px] w-2/5 border-r border-gray-700 overflow-y-auto p-8 space-y-4 max-h-[calc(100vh-8rem)]">
 
                 {projects.map((project) => (
                 <Card
@@ -65,7 +65,7 @@ const ProjectShowcase = ({ projects }) => {
             </div>
 
             {/* Right panel - project details */}
-            <div className="w-2/3 p-6 relative">
+            <div className="w-3/5 p-6 relative">
                 <button
                     className="absolute top-2 right-0 text-4xl text-gray-400 hover:text-white cursor-pointer"
                     onClick={handleClose}

@@ -25,6 +25,10 @@ body {
     font-weight: 300;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 .hide-on-small {
     display: hidden; 
 }

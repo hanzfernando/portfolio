@@ -16,20 +16,17 @@ const AboutPage = () => {
                     Hello, I'm Hanz Fernando
                 </h1>
 
-                <p className="text-center text-[1.05em] leading-[2em] text-[#949494] font-poppins">
-                    I'm a 20-year-old college student with a passion for web development.<br />
-                    Feel free to explore my{' '}
-                    <Link to={'/projects'} className="font-bold no-underline text-[#c5c5c5]">
-                        previous projects
-                    </Link>{' '}
-                    to get a sense of my work.<br />
-                    I am available from UTC-5 to UTC-10.{' '}
-                    <span className="font-bold no-underline text-[#c5c5c5]">
-                        fernandohanz23@gmail.com
-                    </span>
-
-
+                <p className="text-center tex-justify text-[1.05em] leading-[2em] text-[#949494] font-poppins max-w-xl">
+                I'm a 20-year-old college student with a passion for web development. Feel free to explore my{' '}
+                <Link to={'/projects'} className="font-bold no-underline text-[#c5c5c5]">
+                    previous projects
+                </Link>{' '}
+                to get a sense of my work. I am available from UTC-5 to UTC-10.{' '}
+                <span className="font-bold no-underline text-[#c5c5c5]">
+                    fernandohanz23@gmail.com
+                </span>
                 </p>
+
 
 
             </div>

@@ -7,7 +7,7 @@ const AboutPage = () => {
     return (
         <>
             <BurgerNav />
-            <div className="flex flex-col justify-center items-center h-full px-4">
+            <div className="flex flex-col justify-center items-center h-full md:w-[70%] w-[90%] mx-auto px-4">
                 <div className="mb-7 w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
                     <img 
                         src={profile} 

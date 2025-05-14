@@ -1,8 +1,10 @@
 import React from 'react'
-import profile from '../assets/public/hanz-img.png' // adjust the path as needed
+import { FaFacebookF, FaInstagram, FaGithub, FaLinkedinIn } from 'react-icons/fa'  // import official icons
+import profile from '../assets/public/hanz-img.png' 
 import { Link } from 'react-router-dom'
-import  PageNavigation from '../components/PageNavigation'
+import PageNavigation from '../components/PageNavigation'
 import BurgerNav from '../components/BurgerNav'
+
 const AboutPage = () => {
     return (
         <>
@@ -30,6 +32,50 @@ const AboutPage = () => {
                         fernandohanz23@gmail.com
                     </span>
                 </p>
+
+                {/* Social Links */}
+                <ul className="flex gap-4 mt-8">
+                    <li>
+                        <a 
+                            href="https://www.facebook.com/HanzFernando.23" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:scale-110 transition-transform"
+                        >
+                            <FaFacebookF className="w-8 h-8 text-blue-600" />
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://www.instagram.com/hanz_hanz21/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:scale-110 transition-transform"
+                        >
+                            <FaInstagram className="w-8 h-8 text-pink-500" />
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://github.com/hanzfernando" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:scale-110 transition-transform"
+                        >
+                            <FaGithub className="w-8 h-8 text-white" />
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://www.linkedin.com/in/hanz-fernando-1a0b5428b/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:scale-110 transition-transform"
+                        >
+                            <FaLinkedinIn className="w-8 h-8 text-blue-500" />
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <div className="hide-on-small">

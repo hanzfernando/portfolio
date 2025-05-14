@@ -64,7 +64,7 @@
         "link": ""
     },
     {
-        "id": 7,
+        "id": 5,
         "title": "Document Template Builder",
         "tags": ["Web", "MongoDB", "Express", "Node.js", "React"],
         "thumbnail": "/img_showcase/img_showcase-docbuilder.png",
@@ -83,7 +83,7 @@
     },
     {
         "id": 6,
-        "title": "WorkWell WebApp - Web",
+        "title": "WorkWell - Web",
         "tags": ["Web", "React", "ASP.Net Core", "Firebase"],
         "thumbnail": "/img_showcase/img_showcase-workwell-web.png",
         "images": [],
@@ -102,7 +102,7 @@
     },
     {
         "id": 7,
-        "title": "WorkWell WebApp - Android",
+        "title": "WorkWell - Android",
         "tags": ["Android", "Java", "XML", "Firebase"],
         "thumbnail": "/img_showcase/img_showcase-workwell-android.png",
         "images": [],

@@ -5,10 +5,8 @@ import projects from '../assets/data/projects.json';
 import BurgerNav from '../components/BurgerNav';
 
 const ProjectsPage = () => {
-  // State for the selected tag
   const [selectedTag, setSelectedTag] = useState(null);
 
-  // Extract unique tags from the projects data
   const allTags = projects.reduce((acc, project) => {
     if (project.tags) {
       project.tags.forEach(tag => {
@@ -20,60 +18,68 @@ const ProjectsPage = () => {
     return acc;
   }, []).sort();
 
-  // Filter projects based on the selected tag
   const filteredProjects = selectedTag
     ? projects.filter(project => project.tags?.includes(selectedTag))
     : projects;
 
-  // Handle tag click to toggle selection
   const handleTagClick = (tag) => {
-    if (selectedTag === tag) {
-      // If the clicked tag is already selected, deselect it (show all projects)
-      setSelectedTag(null);
-    } else {
-      // Otherwise, select the clicked tag
-      setSelectedTag(tag);
-    }
+    setSelectedTag(selectedTag === tag ? null : tag);
   };
 
   return (
     <>
-        <BurgerNav />
-        <div className="md:w-[70%] w-[90%] max-w-4xl mx-auto pt-32 pb-20">
-            <div className="mb-8 px-5">
-            <h1 className="font-bold text-4xl tracking-tight text-[#c5c5c5]">
-                Software Development Portfolio
-            </h1>
-            <p className="text-lg text-[#949494] leading-[2em] font-poppins">
-                Check out my latest software development works
-            </p>
-            <div className="flex flex-wrap mt-5">
-                {allTags.map((tag, index) => (
-                <div
-                    key={index}
-                    onClick={() => handleTagClick(tag)}
-                    className={`cursor-pointer bg-[#313131] text-[#999] border-b-2 border-[#222] rounded-[5px] text-[.8em] leading-[1em] shadow-[1px_1px_0_rgba(0,0,0,.25)] px-[8px] py-[10px] mr-2 mb-2 uppercase font-bold ${
-                        selectedTag === tag ? 'bg-[#444] text-white' : ''
-                    }`}
-                >
-                    {tag}
-                </div>
-                ))}
-            </div>
-            </div>
+      <div className="md:w-[70%] w-[90%] max-w-4xl mx-auto pt-32 pb-20">
+        <div className="mb-8 px-5">
+          <h1 className="font-bold text-4xl tracking-tight text-[var(--color-foreground)]">
+            Software Development Portfolio
+          </h1>
+          <p className="text-lg leading-[2em] font-poppins text-[var(--color-muted)]">
+            Check out my latest software development works
+          </p>
 
-            <ProjectShowcase projects={filteredProjects} />
+          <div className="flex flex-wrap mt-5">
+            {allTags.map((tag, index) => (
+              <div
+                key={index}
+                onClick={() => handleTagClick(tag)}
+                className={`cursor-pointer
+                  bg-gray-200 text-gray-600 
+                  border-b-2 border-gray-300 
+                  rounded-md text-[0.75rem] leading-[1em]
+                  px-3 py-[10px] mr-2 mb-2 uppercase font-bold 
+                  shadow-[1px_1px_0_rgba(0,0,0,0.1)] 
+                  transition-all duration-150 ease-in-out
+                  hover:bg-gray-300 hover:text-gray-800
+
+                  dark:bg-[#2b2b2b] dark:text-[var(--color-muted)] 
+                  dark:border-[#1a1a1a] 
+                  dark:shadow-[1px_1px_0_rgba(0,0,0,0.3)] 
+                  dark:hover:bg-[#3a3a3a] dark:hover:text-[var(--color-accent)]
+
+                  ${
+                    selectedTag === tag
+                      ? 'bg-gray-400 text-gray-900 border-gray-500 dark:bg-[#444] dark:text-white dark:border-[#333]'
+                      : ''
+                  }`}
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="hide-on-small">
-            <PageNavigation
-                previousPage="/about"
-                nextPage="/contact"
-                prevPageName="about"
-                nextPageName="contact"
-                className="block"
-            />
-        </div>
+        <ProjectShowcase projects={filteredProjects} />
+      </div>
+
+      <div className="hide-on-small">
+        <PageNavigation
+          previousPage="/about"
+          nextPage="/contact"
+          prevPageName="about"
+          nextPageName="contact"
+          className="block"
+        />
+      </div>
     </>
   );
 };

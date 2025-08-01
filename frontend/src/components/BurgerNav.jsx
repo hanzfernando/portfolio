@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
+import ThemeToggleButton from "./ThemeToggleButton"
 
 const BurgerNav = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -10,12 +11,12 @@ const BurgerNav = () => {
     return (
         <>
             {/* Top Glassy Bar with Burger Icon */}
-            <div className="fixed top-0 left-0 w-full h-16 flex items-center justify-between px-6 bg-white/10 backdrop-blur-lg md:border-none border-b border-white/20 z-[1101] md:bg-transparent">
+            <div className="fixed top-0 left-0 w-full h-16 flex items-center justify-between px-6 bg-white/10 backdrop-blur-lg md:backdrop-blur-none md:border-none border-b border-white/20 z-[1101] md:bg-transparent">
             {/* Burger Icon */}
                 <div className="cursor-pointer z-[1102] md:fixed md:top-12 md:right-20 ml-auto" onClick={toggleMenu}>
-                    <div className={`w-12 h-1 bg-[#666666] transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''} dark:bg-[#666666]`} />
-                    <div className={`w-12 h-1 bg-[#666666] mt-2 transition-all duration-300 ${isOpen ? 'hidden mt-3 ' : ''} dark:bg-[#666666]`} />
-                    <div className={`w-12 h-1 bg-[#666666] mt-2 transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2 mt-3 ' : ''} dark:bg-[#666666]`} />
+                    <div className={`w-12 h-1 bg-[var(--color-muted)] transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''} dark:bg-[#666666]`} />
+                    <div className={`w-12 h-1 bg-[var(--color-muted)] mt-2 transition-all duration-300 ${isOpen ? 'hidden mt-3 ' : ''} dark:bg-[#666666]`} />
+                    <div className={`w-12 h-1 bg-[var(--color-muted)] mt-2 transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2 mt-3 ' : ''} dark:bg-[#666666]`} />
                 </div>
             </div>
 
@@ -55,6 +56,9 @@ const BurgerNav = () => {
                 >
                     Contact
                 </Link>
+
+                <ThemeToggleButton />
+
             </div>
         </>
     )

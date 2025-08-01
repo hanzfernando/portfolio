@@ -8,16 +8,16 @@ const ProjectShowcase = ({ projects }) => {
   const Card = ({ project, onClick, isActive }) => (
     <div
       onClick={onClick}
-      className={`w-full shrink-0 group relative overflow-hidden border transform transition duration-300 md:mr-0 mr-4 ${
+      className={`w-[calc(100%-2rem)] md:w-full shrink-0 group relative overflow-hidden border transform transition duration-300 md:mr-0 mr-2 ${
         isActive
-            ? "bg-gray-700 border-gray-600 scale-[1.05] shadow-[4px_4px_12px_rgba(120,120,120,0.2)]"
-            : "bg-[#1E1E1E] border-[#2d2d2d] hover:bg-[#1E1E1E] hover:shadow-[4px_4px_12px_rgba(120,120,120,0.25)] hover:scale-105"
-        } cursor-pointer`}
-
+          ? "bg-[--color-muted] border-[--color-muted] scale-[1.05] shadow-[4px_4px_12px_rgba(120,120,120,0.2)]"
+          : "bg-[--color-background] border-[--color-muted] hover:bg-[--color-accent] hover:shadow-[4px_4px_12px_rgba(120,120,120,0.25)] hover:scale-105"
+      } cursor-pointer`}
     >
-        <div className="bg-[#222] uppercase text-left px-2 py-2 text-xs font-semibold text-[#999] z-20 relative truncate">
-            {project.title}
-        </div>
+
+      <div className="bg-[var(--color-background)] text-[var(--color-foreground)] uppercase text-left px-2 py-2 text-xs font-semibold text-[var(--color-foreground)] z-20 relative truncate">
+          {project.title}
+      </div>
 
 
       <div className="relative w-full h-0 pb-[56.25%]">
@@ -32,18 +32,23 @@ const ProjectShowcase = ({ projects }) => {
         {project.shortDescription}
       </div>
 
-        <div className="absolute bottom-3 right-3 bg-[#313131] px-2 py-1 rounded-lg z-10 max-w-[85%] flex flex-wrap gap-1 overflow-hidden">
-            {project.tags?.map((tag, i) => (
-                <span key={i} className="text-[#bbb] text-[10px] px-1 py-[1px] bg-[#444] rounded">
-                {tag}
-                </span>
-            ))}
-            {project.tags?.length > 5 && (
-                <span className="text-[#aaa] text-[10px] px-1 py-[1px] bg-[#333] rounded">
-                +{project.tags.length - 5} more
-                </span>
-            )}
-        </div>
+      <div className="absolute bottom-3 right-3 bg-black/60 text-white px-2 py-1 rounded-lg z-10 max-w-[85%] flex flex-wrap gap-1 overflow-hidden">
+        {project.tags?.map((tag, i) => (
+          <span
+            key={i}
+            className="text-white text-[10px] px-1 py-[1px] bg-black/40 rounded"
+          >
+            {tag}
+          </span>
+        ))}
+        {project.tags?.length > 5 && (
+          <span className="text-white text-[10px] px-1 py-[1px] bg-black/70 rounded">
+            +{project.tags.length - 5} more
+          </span>
+        )}
+      </div>
+
+
 
     </div>
   );
@@ -51,36 +56,39 @@ const ProjectShowcase = ({ projects }) => {
   return (
     <>
       {selectedProject ? (
-        <div className="flex flex-col md:flex-row border-t border-gray-700 min-h-[70vh]">
+        <div className="flex flex-col md:flex-row border-t border-border min-h-[70vh]">
           {/* Project List */}
-          <div className="w-full md:w-2/5 border-b md:border-b-0 md:border-r border-gray-700 p-4">
-            <div
-              className="flex md:flex-col md:overflow-x-hidden gap-4 overflow-y-auto pb-2 md:pb-0"
-              style={{ WebkitOverflowScrolling: "touch",
-                maxHeight: "calc(100vh - 150px)",
-               }}
-            >
-              {projects.map((project) => (
-                <Card
-                  key={project.id + project.title}
-                  project={project}
-                  isActive={selectedProject.id === project.id}
-                  onClick={() => setSelectedProject(project)}
-                />
-              ))}
-            </div>
+          <div className="w-full md:w-2/5 border-b md:border-b-0 md:border-r border-border p-4">
+              <div
+                className="flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto gap-4 p-2 md:pb-0 scroll-smooth"
+                style={{
+                  WebkitOverflowScrolling: "touch",
+                  maxHeight: "calc(100vh - 150px)",
+                  scrollSnapType: "x mandatory",
+                }}
+              >
+                {projects.map((project) => (
+                  <Card
+                    key={project.id + project.title}
+                    project={project}
+                    isActive={selectedProject.id === project.id}
+                    onClick={() => setSelectedProject(project)}
+                  />
+                ))}
+              </div>
           </div>
+
 
           {/* Project Detail */}
           <div className="w-full md:w-3/5 p-6 relative">
             <button
-              className="absolute top-2 right-0 text-4xl text-gray-400 hover:text-white cursor-pointer"
+              className="absolute top-2 right-0 text-4xl text-muted hover:text-foreground cursor-pointer"
               onClick={handleClose}
             >
               ×
             </button>
 
-            <h2 className="text-2xl font-bold text-white mb-2">
+            <h2 className="text-2xl font-bold text-foreground mb-2">
               {selectedProject.title}
             </h2>
 
@@ -88,21 +96,21 @@ const ProjectShowcase = ({ projects }) => {
               {selectedProject.tags?.map((tag, i) => (
                 <span
                   key={i}
-                  className="bg-[#313131] text-[#bbb] text-xs px-2 py-1"
+                  className="bg-surface text-muted text-xs px-2 py-1 rounded"
                 >
                   {tag}
                 </span>
               ))}
             </div>
 
-            <p className="text-gray-300 mb-4">{selectedProject.description}</p>
+            <p className="text-muted mb-4">{selectedProject.description}</p>
 
             {selectedProject.learningPoints?.length > 0 && (
               <div className="mb-4">
-                <h3 className="text-lg font-semibold text-white mb-2">
+                <h3 className="text-lg font-semibold text-foreground mb-2">
                   Learning Highlights
                 </h3>
-                <ul className="list-disc list-inside space-y-1 text-sm text-gray-300">
+                <ul className="list-disc list-inside space-y-1 text-sm text-muted">
                   {selectedProject.learningPoints.map((point, i) => (
                     <li key={i} className="leading-snug">
                       {point}
@@ -115,7 +123,7 @@ const ProjectShowcase = ({ projects }) => {
             {selectedProject.link && (
               <a
                 href={selectedProject.link}
-                className="text-blue-400 hover:underline"
+                className="text-brand hover:text-brandHover hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >

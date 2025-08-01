@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom";
+import BurgerNav from "../components/BurgerNav";
 
 const MainLayout = () => {
 
   return (
     <div className="w-full h-screen box-border">
         <div className="w-full h-full">
-            <Outlet />
+          <BurgerNav />
+          <Outlet />
         </div>
     </div>
   );

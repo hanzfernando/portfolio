@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #f3f4f6;        
+  --color-foreground: #1f2937;       
+  --color-muted: #6b7280;             
+  --color-accent: #c5c5c5;             
+}
+
+.dark {
+  --color-background: #18181b;
+  --color-foreground: #c5c5c5;        
+  --color-muted: #949494;              
+  --color-accent: #ffffff;           
+}
+
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -17,7 +39,6 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #2a2a2a;
 }
 
 .font-poppins {
@@ -30,14 +51,10 @@ body {
 }
 
 .hide-on-small {
-    display: hidden; 
-}
-
-.hide-on-small {
     display: none; 
   }
   
-  @media (min-width: 800px) {
+  @media (min-width: 1200px) {
     .hide-on-small {
       display: block; 
     }
@@ -69,7 +86,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* cursor: pointer; */
         height: 100%;
         width: 100%;
         left: 50%;
@@ -84,7 +100,6 @@ body {
     .page-control_arrow-top, .page-control_arrow-bottom {
         background-color: #666;
         height: 2.5px;
-        /* left: -5px; */
         position: absolute;
         top: 50%;
         width: 2.5em;
@@ -114,7 +129,7 @@ body {
         
 
     .page-control_arrow-top:after, .page-control_arrow-bottom:after {
-        background-color: #999;
+        background-color: var(--color-muted);
         content: "";
         height: 100%;
         position: absolute;
@@ -194,7 +209,7 @@ body {
 }
 
 .page-control span {
-    color: #aaaaaa;
+    color: var(--color-muted);
     position: absolute;
     white-space: nowrap;
     top: calc(50% - 15.5px);

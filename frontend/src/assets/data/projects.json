@@ -35,7 +35,7 @@
     {
         "id": 3,
         "title": "Gabay: A Local-based Travel Expenditure Log",
-        "tags": ["Android", "Java", "XML", "Firebase"],
+        "tags": ["Android", "Java", "Firebase"],
         "thumbnail": "/img_showcase/img_showcase-gabay.png",
         "images": [],
         "shortDescription": "An Android app that helps users log and categorize travel expenses.",
@@ -103,7 +103,7 @@
     {
         "id": 7,
         "title": "WorkWell - Android",
-        "tags": ["Android", "Java", "XML", "Firebase"],
+        "tags": ["Android", "Java", "Firebase"],
         "thumbnail": "/img_showcase/img_showcase-workwell-android.png",
         "images": [],
         "shortDescription": "An Android app for patients to view, perform, and review their assigned exercise routines.",
@@ -115,7 +115,28 @@
         "Collaborated with a developer to successfully integrate pose detection into the application."
         ],
         "link": "https://workwell-client.onrender.com/"
+    },
+    {
+      "id": 8,
+      "title": "Pitaka – Expense & Subscription Tracker",
+      "tags": ["Web", "Next.js", "Supabase"],
+      "thumbnail": "/img_showcase/img_showcase-pitaka.png",
+      "images": [],
+      "shortDescription": "A financial tracking app for managing personal expenses and subscriptions with insightful dashboards.",
+      "description": "Pitaka is a personal finance tracker that helps users monitor their daily expenses and recurring subscriptions. It features an interactive dashboard built with Recharts, secure user authentication with Supabase Auth, and a responsive UI styled with Tailwind CSS. Users can categorize their expenses, track subscription renewals, and view financial summaries in a clean, accessible interface. The app enforces row-level security to keep user data isolated and secure.",
+      "learningPoints": [
+        "Built a full-stack application using Next.js App Router and Supabase.",
+        "Designed and implemented Recharts-powered dashboards for visualizing financial data.",
+        "Applied Supabase Row-Level Security (RLS) to protect user-specific data access.",
+        "Used Tailwind CSS for building a modern, responsive, dark-mode-friendly UI.",
+        "Structured and optimized the database schema for tracking both one-time and recurring expenses.",
+        "Handled authentication with Supabase Auth and maintained session persistence.",
+        "Practiced component-based architecture and clean code separation for maintainability.",
+        "Wrote unit tests for key helpers using Jest."
+      ],
+      "link": "https://pitaka-by-hanz.vercel.app/"
     }
+
     
     
 ]

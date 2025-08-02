@@ -8,11 +8,13 @@ const ProjectShowcase = ({ projects }) => {
   const Card = ({ project, onClick, isActive }) => (
     <div
       onClick={onClick}
-      className={`w-[calc(100%-2rem)] md:w-full shrink-0 group relative overflow-hidden border transform transition duration-300 md:mr-0 mr-2 ${
-        isActive
-          ? "bg-[--color-muted] border-[--color-muted] scale-[1.05] shadow-[4px_4px_12px_rgba(120,120,120,0.2)]"
-          : "bg-[--color-background] border-[--color-muted] hover:bg-[--color-accent] hover:shadow-[4px_4px_12px_rgba(120,120,120,0.25)] hover:scale-105"
-      } cursor-pointer`}
+      className={`shrink-0 group relative overflow-hidden border transform transition duration-300 md:mr-0 mr-2 
+        ${selectedProject ? "w-[calc(100%-2rem)]" : "w-full"}
+        ${
+          isActive
+            ? "bg-[--color-muted] border-[--color-muted] scale-[1.05] shadow-[4px_4px_12px_rgba(120,120,120,0.2)]"
+            : "bg-[--color-background] border-[--color-muted] hover:bg-[--color-accent] hover:shadow-[4px_4px_12px_rgba(120,120,120,0.25)] hover:scale-105"
+        } cursor-pointer`}
     >
 
       <div className="bg-[var(--color-background)] text-[var(--color-foreground)] uppercase text-left px-2 py-2 text-xs font-semibold text-[var(--color-foreground)] z-20 relative truncate">

@@ -13,7 +13,7 @@ const AboutPage = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col justify-center items-center h-full md:w-[70%] w-[90%] mx-auto px-4"
+        className="flex flex-col justify-center items-center h-full md:w-[70%] w-[90%] mx-auto md:pt-4 pt-16 md:pb-4"
       >
         {/* Profile Image */}
         <motion.div
@@ -34,7 +34,7 @@ const AboutPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-[1.8em] leading-[2em] text-center font-bold text-[var(--color-foreground)]"
+          className="text-[1.6em] md:text-[1.8em] leading-[2em] text-center font-bold text-[var(--color-foreground)]"
         >
           Hello, I'm Hanz Fernando
         </motion.h1>
@@ -44,13 +44,13 @@ const AboutPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-center text-justify text-[1.05em] leading-[2em] font-poppins max-w-xl text-[var(--color-muted)] mt-2"
+          className="text-center text-justify text-[0.9em] md:text-[1.05em] leading-[2em] font-poppins max-w-xl text-[var(--color-muted)] mt-2"
         >
           I'm a 20-year-old college student with a passion for web development. Feel free to explore my{' '}
           <Link to="/projects" className="font-bold underline underline-offset-2 text-[var(--color-foreground)] hover:text-[var(--color-accent)]">
             previous projects
           </Link>{' '}
-          to get a sense of my work. I am available from UTC-5 to UTC-10.{' '}
+          to get a sense of my work. You can contact me via
           <span className="font-bold text-[var(--color-foreground)]">
             fernandohanz23@gmail.com
           </span>

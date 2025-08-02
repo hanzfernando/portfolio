@@ -7,6 +7,20 @@ import BurgerNav from '../components/BurgerNav';
 import { motion } from 'framer-motion';
 
 const AboutPage = () => {
+  const calculateAge = (birthDate) => {
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const hasBirthdayPassedThisYear =
+      today.getMonth() > birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+    if (!hasBirthdayPassedThisYear) {
+      age--;
+    }
+    return age;
+  };
+
+
   return (
     <>
       <motion.div
@@ -46,7 +60,7 @@ const AboutPage = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-center text-justify text-[0.9em] md:text-[1.05em] leading-[2em] font-poppins max-w-xl text-[var(--color-muted)] mt-2"
         >
-          I'm a 20-year-old college student with a passion for web development. Feel free to explore my{' '}
+          I'm a {calculateAge(new Date(2003, 6, 21))}-year-old college student with a passion for web development. Feel free to explore my{' '}
           <Link to="/projects" className="font-bold underline underline-offset-2 text-[var(--color-foreground)] hover:text-[var(--color-accent)]">
             previous projects
           </Link>{' '}

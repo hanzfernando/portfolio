@@ -64,7 +64,7 @@ const AboutPage = () => {
           <Link to="/projects" className="font-bold underline underline-offset-2 text-[var(--color-foreground)] hover:text-[var(--color-accent)]">
             previous projects
           </Link>{' '}
-          to get a sense of my work. You can contact me via
+          to get a sense of my work. You can contact me via{' '}
           <span className="font-bold text-[var(--color-foreground)]">
             fernandohanz23@gmail.com
           </span>

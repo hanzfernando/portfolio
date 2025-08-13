@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "TicketFlare - Event Management System",
-        "tags": ["Web", "ASP.Net Core", "C#", "MySQL"],
+        "tags": ["Web", "HTML", "CSS", "Javascript", "C#", "ASP.Net Core", "MySQL"],
         "thumbnail": "/img_showcase/img_showcase-ticketflare.png",
         "images": [],
         "shortDescription": "A web-based event management system for school events, allowing organizations to create events and users to register.",
@@ -20,7 +20,7 @@
     {
         "id": 2,
         "title": "AMISCOSA - Sales and Inventory System",
-        "tags": ["Web", "ASP.Net Core", "C#", "MySQL"],
+        "tags": ["Web", "HTML", "CSS", "Javascript","C#", "ASP.Net Core", "MySQL"],
         "thumbnail": "/img_showcase/img_showcase-amiscosa.png",
         "images": [],
         "shortDescription": "A desktop application for managing sales transactions and inventory tracking.",
@@ -51,7 +51,7 @@
     {
         "id": 4,
         "title": "Co's Crocket Shop",
-        "tags": ["Web", "MongoDB", "Express", "Node.js", "React"],
+        "tags": ["Web", "MongoDB", "Express", "React", "Node.js"],
         "thumbnail": "/img_showcase/img_showcase-coscrochet.png",
         "images": [],
         "shortDescription": "An e-commerce website for selling made-to-order crochet products, built using the MERN stack.",
@@ -66,7 +66,7 @@
     {
         "id": 5,
         "title": "Document Template Builder",
-        "tags": ["Web", "MongoDB", "Express", "Node.js", "React"],
+        "tags": ["Web", "MongoDB", "Express", "React", "Node.js"],
         "thumbnail": "/img_showcase/img_showcase-docbuilder.png",
         "images": [],
         "shortDescription": "A role-based document template builder styled like MS Word, with editable fields and export functionality.",
@@ -84,7 +84,7 @@
     {
         "id": 6,
         "title": "WorkWell - Web",
-        "tags": ["Web", "React", "ASP.Net Core", "Firebase"],
+        "tags": ["Web", "React", "TailwindCSS", "C#", "ASP.Net Core", "Firebase", "Render", "Vercel"],
         "thumbnail": "/img_showcase/img_showcase-workwell-web.png",
         "images": [],
         "shortDescription": "A web platform for managing patient records and assigning exercise routines.",
@@ -118,8 +118,8 @@
     },
     {
       "id": 8,
-      "title": "Pitaka – Expense & Subscription Tracker",
-      "tags": ["Web", "Next.js", "Supabase"],
+      "title": "Pitaka - Expense & Subscription Tracker",
+      "tags": ["Web", "Next.js", "TailwindCSS", "Supabase", "Jest", "Vercel"],
       "thumbnail": "/img_showcase/img_showcase-pitaka.png",
       "images": [],
       "shortDescription": "A financial tracking app for managing personal expenses and subscriptions with insightful dashboards.",

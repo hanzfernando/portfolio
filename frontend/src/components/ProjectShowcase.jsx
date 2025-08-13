@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import placeholderImg from "../assets/public/placeholder-img.jpg";
+import TagBadge from "./TagBadge";
+import { tagBadges } from "../assets/data/tagBadges";
 
 const ProjectShowcase = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -34,19 +36,15 @@ const ProjectShowcase = ({ projects }) => {
         {project.shortDescription}
       </div>
 
-      <div className="absolute bottom-3 right-3 bg-black/60 text-white px-2 py-1 rounded-lg z-10 max-w-[85%] flex flex-wrap gap-1 overflow-hidden">
-        {project.tags?.map((tag, i) => (
-          <span
-            key={i}
-            className="text-white text-[10px] px-1 py-[1px] bg-black/40 rounded"
-          >
-            {tag}
-          </span>
+      <div className="absolute bottom-3 right-3 bg-black/60 px-2 py-1 rounded-lg z-10 max-w-[85%] flex flex-wrap gap-1 overflow-hidden">
+        {project.tags?.slice(0, 3).map((tag, i) => (
+          <TagBadge key={i} text={tag} />
         ))}
-        {project.tags?.length > 5 && (
-          <span className="text-white text-[10px] px-1 py-[1px] bg-black/70 rounded">
-            +{project.tags.length - 5} more
-          </span>
+        {project.tags?.length > 3 && (
+          <TagBadge
+            text={`+${project.tags.length - 3} more`}
+            variant="more"
+          />
         )}
       </div>
 
@@ -95,15 +93,18 @@ const ProjectShowcase = ({ projects }) => {
             </h2>
 
             <div className="flex flex-wrap gap-2 mb-3">
-              {selectedProject.tags?.map((tag, i) => (
-                <span
-                  key={i}
-                  className="bg-surface text-muted text-xs px-2 py-1 rounded"
-                >
-                  {tag}
-                </span>
-              ))}
+              {selectedProject.tags?.map((tag, i) => {
+                const badgeUrl = tagBadges[tag];
+                return (
+                  <TagBadge
+                    key={i}
+                    text={badgeUrl || tag}
+                    variant={badgeUrl ? "shield" : "detail"}
+                  />
+                );
+              })}
             </div>
+
 
             <p className="text-muted mb-4">{selectedProject.description}</p>
 

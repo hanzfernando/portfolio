@@ -5,8 +5,8 @@ const TagBadge = ({ text, variant = "default" }) => {
     "text-[10px] px-2 py-[2px] rounded whitespace-nowrap";
 
   const variants = {
-    default: "bg-black/40 text-white",
-    more: "bg-black/70 text-white",
+    default: "bg-black/70 text-white",
+    more: "bg-black/40 text-white",
     detail: "bg-surface text-muted text-xs",
     shield: "", // no extra styling so the shield image keeps its native look
   };

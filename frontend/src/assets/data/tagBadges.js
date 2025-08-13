@@ -4,12 +4,13 @@ export const tagBadges = {
   'Android': 'https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white&style=for-the-badge',
 
   // Languages
-  'C#': 'https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white&style=for-the-badge',
+  'C#': 'https://custom-icon-badges.demolab.com/badge/C%23-239120.svg?logo=csharp&logoColor=white&style=for-the-badge',
   'Java': 'https://img.shields.io/badge/Java-007396?logo=java&logoColor=white&style=for-the-badge',
   'HTML': 'https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge',
   'CSS': 'https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge',
   'Javascript': 'https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge',
-
+  'TypeScript': 'https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white&style=for-the-badge',
+  
   // Frameworks & Libraries
   'ASP.Net Core': 'https://img.shields.io/badge/ASP.Net%20Core-512BD4?logo=dotnet&logoColor=white&style=for-the-badge',
   'Express': 'https://img.shields.io/badge/Express-000000?logo=express&logoColor=white&style=for-the-badge',

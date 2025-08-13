@@ -119,7 +119,7 @@
     {
       "id": 8,
       "title": "Pitaka - Expense & Subscription Tracker",
-      "tags": ["Web", "Next.js", "TailwindCSS", "Supabase", "Jest", "Vercel"],
+      "tags": ["Web", "TypeScript", "Next.js", "TailwindCSS", "Supabase", "Jest", "Vercel"],
       "thumbnail": "/img_showcase/img_showcase-pitaka.png",
       "images": [],
       "shortDescription": "A financial tracking app for managing personal expenses and subscriptions with insightful dashboards.",
@@ -135,8 +135,25 @@
         "Wrote unit tests for key helpers using Jest."
       ],
       "link": "https://pitaka-by-hanz.vercel.app/"
-    }
-
-    
-    
+    },
+    {
+    "id": 9,
+    "title": "Limis - Credential Manager",
+    "tags": ["Web", "TypeScript", "MongoDB", "Express", "React", "Node.js", "Vercel", "Render"],
+    "thumbnail": "/img_showcase/img_showcase-limis.png",
+    "images": [],
+    "shortDescription": "A secure, zero-knowledge password manager with client-side encryption and vault-based organization.",
+    "description": "Limis is a monolithic credential manager that allows users to securely store and manage their sensitive information in encrypted vaults. It uses AES-GCM encryption for data security, with keys derived via Argon2id to prevent brute-force attacks. Vault data is encrypted client-side, ensuring zero-knowledge design where only the user can decrypt their information. The app supports secure cookie-based JWT authentication, email verification, and a responsive UI. Users can create multiple vaults, each acting as a container for their credentials.",
+    "learningPoints": [
+      "Implemented AES-GCM encryption with SHA-256 hashing for secure client-side data protection.",
+      "Derived encryption keys using Argon2id with WASM for improved security and performance.",
+      "Designed a vault-based architecture to organize and segregate credentials.",
+      "Built secure cookie-based JWT authentication and email verification.",
+      "Implemented zero-knowledge principles ensuring that sensitive data is never stored in plaintext.",
+      "Structured API with Express and MongoDB using Mongoose models and TypeScript interfaces.",
+      "Applied reusable middleware for authentication, logging, and error handling.",
+      "Deployed full-stack application using Vercel (frontend) and Render (backend)."
+    ],
+    "link": "https://limis-by-hanz.vercel.app/"
+  }  
 ]

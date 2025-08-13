@@ -18,8 +18,8 @@ export const tagBadges = {
   'Node.js': 'https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white&style=for-the-badge',
   'React': 'https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black&style=for-the-badge',
   'TailwindCSS': 'https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white&style=for-the-badge',
-  // 'Recharts': 'https://img.shields.io/badge/Recharts-22B5BF?logo=recharts&logoColor=white&style=for-the-badge',
-  // 'MediaPipe': 'https://img.shields.io/badge/MediaPipe-FF6F00?logo=google&logoColor=white&style=for-the-badge',
+  'Redux': 'https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white&style=for-the-badge',
+  'JWT': 'https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens&logoColor=white&style=for-the-badge',
 
   // Databases & Backend Services
   'Firebase': 'https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black&style=for-the-badge',

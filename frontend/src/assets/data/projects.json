@@ -51,7 +51,7 @@
     {
         "id": 4,
         "title": "Co's Crocket Shop",
-        "tags": ["Web", "MongoDB", "Express", "React", "Node.js"],
+        "tags": ["Web", "MongoDB", "Express", "React", "Node.js", "JWT"],
         "thumbnail": "/img_showcase/img_showcase-coscrochet.png",
         "images": [],
         "shortDescription": "An e-commerce website for selling made-to-order crochet products, built using the MERN stack.",
@@ -66,7 +66,7 @@
     {
         "id": 5,
         "title": "Document Template Builder",
-        "tags": ["Web", "MongoDB", "Express", "React", "Node.js"],
+        "tags": ["Web", "MongoDB", "Express", "React", "Node.js", "JWT"],
         "thumbnail": "/img_showcase/img_showcase-docbuilder.png",
         "images": [],
         "shortDescription": "A role-based document template builder styled like MS Word, with editable fields and export functionality.",
@@ -84,7 +84,7 @@
     {
         "id": 6,
         "title": "WorkWell - Web",
-        "tags": ["Web", "React", "TailwindCSS", "C#", "ASP.Net Core", "Firebase", "Render", "Vercel"],
+        "tags": ["Web", "React", "TailwindCSS", "C#", "ASP.Net Core", "Firebase", "Render", "JWT", "Vercel"],
         "thumbnail": "/img_showcase/img_showcase-workwell-web.png",
         "images": [],
         "shortDescription": "A web platform for managing patient records and assigning exercise routines.",
@@ -139,7 +139,7 @@
     {
     "id": 9,
     "title": "Limis - Credential Manager",
-    "tags": ["Web", "TypeScript", "MongoDB", "Express", "React", "Node.js", "Vercel", "Render"],
+    "tags": ["Web", "TypeScript", "MongoDB", "Express", "React", "Node.js", "Redux", "JWT", "Vercel", "Render"],
     "thumbnail": "/img_showcase/img_showcase-limis.png",
     "images": [],
     "shortDescription": "A secure, zero-knowledge password manager with client-side encryption and vault-based organization.",

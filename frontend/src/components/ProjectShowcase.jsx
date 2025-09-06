@@ -56,7 +56,7 @@ const ProjectShowcase = ({ projects }) => {
   return (
     <>
       {selectedProject ? (
-        <div className="flex flex-col md:flex-row border-t border-border min-h-[70vh]">
+        <div className="flex flex-col md:flex-row border-t border-border min-h-[70vh] mt-8">
           {/* Project List */}
           <div className="w-full md:w-2/5 border-b md:border-b-0 md:border-r border-border p-4">
               <div

@@ -43,7 +43,7 @@ const ContactPage = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="w-[90%] md:w-[70%] max-w-4xl mx-auto pt-32 pb-20"
+        className="w-[90%] md:w-[70%] max-w-4xl mx-auto pt-32 px-4 pb-20"
       >
         <motion.h1
           initial={{ opacity: 0, y: 15 }}

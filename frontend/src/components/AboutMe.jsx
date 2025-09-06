@@ -11,27 +11,41 @@ const calculateAge = (birthDate) => {
     today.getMonth() > birthDate.getMonth() ||
     (today.getMonth() === birthDate.getMonth() &&
       today.getDate() >= birthDate.getDate());
-
-  if (!hasBirthdayPassedThisYear) {
-    age--;
-  }
+  if (!hasBirthdayPassedThisYear) age--;
   return age;
+};
+
+// Parent container animation + stagger
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.35, 
+      staggerChildren: 0.1 
+    }
+  }
+};
+
+// Individual child animations
+const childVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35 } }
 };
 
 const AboutMe = () => {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex flex-col items-center text-center h-full md:w-[70%] w-[90%] mx-auto md:pt-4 pt-16 md:pb-4 mb-32"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="flex flex-col items-center text-center h-full md:w-[70%] w-[90%] mx-auto md:pt-8 pt-16 md:pb-14 mb-16"
     >
       {/* Profile Image */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="mb-7 w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80"
+        variants={childVariants}
+        className="mb-7 w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64"
       >
         <img
           src={profile}
@@ -42,20 +56,16 @@ const AboutMe = () => {
 
       {/* Heading */}
       <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-        className="text-[1.6em] md:text-[1.8em] leading-[2em] font-bold text-[var(--color-foreground)]"
+        variants={childVariants}
+        className="text-2xl tracking-tight sm:text-3xl md:text-4xl font-bold text-center leading-tight heading-gradient"
       >
         Hello, I'm Hanz Fernando
       </motion.h1>
 
       {/* Bio */}
       <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
-        className="text-justify text-[0.9em] md:text-[1.05em] leading-[2em] font-poppins max-w-xl text-[var(--color-muted)] mt-2"
+        variants={childVariants}
+        className="text-center md:text-justify text-[0.9em] md:text-[1.05em] leading-[1.9em] font-poppins max-w-xl text-[var(--color-muted)] mt-4"
       >
         I'm a {calculateAge(new Date(2003, 6, 21))}-year-old junior full-stack
         developer with a strong passion for building modern web applications.
@@ -75,9 +85,7 @@ const AboutMe = () => {
 
       {/* Resume */}
       <motion.a
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.5 }}
+        variants={childVariants}
         href="https://drive.google.com/file/d/1IhpaPNk-HnLWzHqIB4tDdu_xguuFoG92/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
@@ -88,30 +96,31 @@ const AboutMe = () => {
 
       {/* Social Links */}
       <motion.ul
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.0, duration: 0.5 }}
+        variants={childVariants}
         className="flex gap-4 mt-8"
       >
         {[
           { href: "https://www.facebook.com/HanzFernando.23", icon: <FaFacebookF /> },
           { href: "https://www.instagram.com/hanz_hanz21/", icon: <FaInstagram /> },
-          { href: "https://github.com/hanzfernando", icon: <FaGithub /> },
-          { href: "https://www.linkedin.com/in/hanz-fernando-1a0b5428b/", icon: <FaLinkedinIn /> },
+          { href: "https://github.com/hanzfernando", icon: <FaGithub />, highlight: true },
+          { href: "https://www.linkedin.com/in/hanz-fernando-1a0b5428b/", icon: <FaLinkedinIn />, highlight: true },
         ].map((item, i) => (
           <li key={i}>
             <a
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full border border-[var(--color-foreground)] text-[var(--color-foreground)] hover:bg-[var(--color-foreground)] hover:text-[var(--color-background)] transition-colors duration-300"
+              className={`flex items-center justify-center w-10 h-10 rounded-full border transition-colors duration-300 ${
+                item.highlight
+                  ? "border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
+                  : "border-[var(--color-foreground)] text-[var(--color-foreground)] hover:bg-[var(--color-foreground)] hover:text-[var(--color-background)]"
+              }`}
             >
               {item.icon}
             </a>
           </li>
         ))}
       </motion.ul>
-
     </motion.section>
   );
 };

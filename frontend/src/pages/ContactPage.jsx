@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion';
 import BurgerNav from '../components/BurgerNav';
 import PageNavigation from '../components/PageNavigation';
 
@@ -37,16 +39,36 @@ const ContactPage = () => {
 
   return (
     <>
-      <div className="w-[90%] md:w-[70%] max-w-4xl mx-auto pt-32 pb-20">
-        <h1 className="text-3xl font-bold text-center text-neutral-900 dark:text-[var(--color-accent)]">
-          Contact Me
-        </h1>
-        <p className="text-center text-neutral-600 dark:text-[var(--color-muted)] mt-2">
-          Have a question or want to work together? Feel free to reach out!
-        </p>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-[90%] md:w-[70%] max-w-4xl mx-auto pt-32 pb-20"
+      >
+        <motion.h1
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="font-bold text-center heading-gradient text-4xl tracking-tight text-[var(--color-foreground)] mb-2 px-5"
 
-        <form
+        >
+          Contact Me
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center text-neutral-600 dark:text-[var(--color-muted)] mt-2"
+        >
+          Have a question or want to work together? Feel free to reach out!
+        </motion.p>
+
+        <motion.form
           onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
           className="space-y-6 mt-8 max-w-3xl mx-auto"
         >
           {/* Name Field */}
@@ -111,32 +133,36 @@ const ContactPage = () => {
 
           {/* Submit Button */}
           <div>
-            <button
+            <motion.button
               type="submit"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
               className="w-full p-3 rounded-lg 
-                         bg-black text-white 
+                          text-white 
                          hover:bg-neutral-800 hover:text-white
                          dark:bg-[var(--color-accent)] dark:text-black 
                          dark:hover:bg-white dark:hover:text-black 
                          transition-all duration-200"
             >
               Send Message
-            </button>
+            </motion.button>
           </div>
-        </form>
+        </motion.form>
 
         {statusMessage && (
-          <div className="mt-4 text-center text-sm text-neutral-600 dark:text-[var(--color-muted)]">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mt-4 text-center text-sm text-neutral-600 dark:text-[var(--color-muted)]"
+          >
             {statusMessage}
-          </div>
+          </motion.div>
         )}
-      </div>
+      </motion.div>
 
       <div className="hide-on-small">
-        <PageNavigation 
-          previousPage="/projects" 
-          prevPageName="projects" 
-        />
+        <PageNavigation previousPage="/projects" prevPageName="projects" />
       </div>
     </>
   );

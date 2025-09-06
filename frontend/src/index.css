@@ -7,19 +7,30 @@
   --color-foreground: #1f2937;       
   --color-muted: #6b7280;             
   --color-accent: #c5c5c5;             
+  --color-gradient-heading: linear-gradient(90deg, #3b82f6, #ec4899);
 }
+
 
 .dark {
   --color-background: #18181b;
   --color-foreground: #c5c5c5;        
   --color-muted: #949494;              
-  --color-accent: #ffffff;           
+  --color-accent: #ffffff;       
+  --color-gradient-heading: linear-gradient(90deg, #06b6d4, #3b82f6);    
 }
 
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
+}
+
+.heading-gradient {
+  background: var(--color-gradient-heading);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 ::-webkit-scrollbar {

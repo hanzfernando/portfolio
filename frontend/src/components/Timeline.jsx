@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaBriefcase, FaCalendarAlt } from "react-icons/fa";
+import { FaGraduationCap, FaBriefcase, FaCalendarAlt, FaLaptopCode } from "react-icons/fa";
 
 const timeline = [
   {
@@ -16,7 +16,7 @@ const timeline = [
     date: "Sept 2024 – Oct 2024",
     description:
       "Intern at Sumi Philippines Wiring Systems Corp. Led intern team, built Material Release Log, and developed Meeting Logging Web App.",
-    icon: FaBriefcase,
+    icon: FaLaptopCode,
     color: "bg-blue-500",
   },
   {
@@ -62,21 +62,26 @@ const FadingTimelineCard = ({ opacity, delay, label = "Future Possibilities", de
 };
 
 
-export default function Timeline() {
+const Timeline = () => {
   return (
-    <section className="max-w-3xl mx-auto px-4 mb-16 sm:mb-24 pb-12">
+   <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.5 }} // delay entire section
+      className="max-w-3xl mx-auto px-8 mb-16 sm:mb-24 pb-12"
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-16 text-[var(--color-foreground)]"
+        className="text-2xl sm:text-2xl md:text-3xl tracking-tight font-bold text-center mb-10 sm:mb-10 heading-gradient"
       >
         The Road So Far
       </motion.h2>
 
       <div className="relative">
         {/* Vertical line with gradient fade */}
-        <div className="absolute left-4 sm:left-5 top-0 w-0.5 sm:w-1 h-full bg-gradient-to-b from-[var(--color-border)] via-[var(--color-border)] to-transparent opacity-60"></div>
+        {/* <div className="absolute left-6 sm:left-8 top-0 w-0.5 sm:w-1 h-full bg-gradient-to-b from-[var(--color-border)] via-[var(--color-border)] to-transparent opacity-60"></div> */}
 
         {timeline.map((item, idx) => {
           const Icon = item.icon;
@@ -94,7 +99,7 @@ export default function Timeline() {
                   <div
                     className={`${item.color} p-2 sm:p-3 rounded-lg shadow-md flex-shrink-0`}
                   >
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    <Icon className="w-8 h-8 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg sm:text-xl font-bold text-[var(--color-foreground)]">
@@ -116,10 +121,11 @@ export default function Timeline() {
 
         
         {/* Future fading cards */}
-        {/* <FadingTimelineCard opacity={0.7} delay={timeline.length * 0.2} /> */}
         <FadingTimelineCard opacity={0.4} delay={(timeline.length ) * 0.2} />
 
       </div>
-    </section>
+    </motion.section>
   );
 }
+
+export default Timeline;

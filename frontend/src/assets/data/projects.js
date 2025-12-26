@@ -166,5 +166,39 @@ export const projects = [
         ],
         "link": "https://limis-by-hanz.vercel.app/",
         isFeatured: true
+    },
+    {
+        "id": 10,
+        "title": "Kloudtech - Kloudtrack",
+        "tags": [tagBadges['Web'], tagBadges['React'], tagBadges['Tailwind CSS'], tagBadges['Node.js'], tagBadges['Express'], tagBadges['PostgreSQL'], tagBadges['AWS']],
+        "thumbnail": "/img_showcase/img_placeholder.jpg",
+        "images": [],
+        "shortDescription": "A web application for managing weather stations and visualizing real-time weather data.",
+        "description": "Kloudtrack web application allows Kloudtech Corp to manage weather stations and allow clients visualize real-time weather data through interactive charts and maps. It features user authentication, station management, and data visualization using recharts. The backend is built with Node.js and Express, while PostgreSQL is database. The application is hosted on AWS using EC2, S3, and RDS.",
+        "learningPoints": [
+            "Gained experience in full-stack development using React for frontend and Node.js with Express for backend.",
+            "Implemented several key features including data visualization using recharts, backend data processing, api creation and management for external client developers.",
+            "Hands-on experience with AWS services such as EC2 for hosting, S3 for storage, and RDS for database management.",
+            "Collaborated with a team to integrate frontend and backend components effectively."
+        ],
+        "link": "",
+        isFeatured: true
+    },
+    {
+        "id": 11,
+        "title": "Kloudtech Public Kloudtrack",
+        "tags": [tagBadges['Web'], tagBadges['Next.js'], tagBadges['Tailwind CSS'], tagBadges['Node.js'], tagBadges['Express'], tagBadges['PostgreSQL'], tagBadges['AWS']],
+        "thumbnail": "/img_showcase/img_placeholder.jpg",
+        "images": [],
+        "shortDescription": "A public-facing web application for visualizing weather data from Kloudtech's weather stations.",
+        "description": "The public Kloudtrack web application allows general users to visualize weather data collected from Kloudtech Corp's weather stations. It features interactive charts and maps to display real-time weather information. This application uses the API created in the main Kloudtrack application to fetch and display data.",
+        "learningPoints": [
+            "Developed a public-facing web application using Next.js and Tailwind CSS for responsive and modern UI.",
+            "Integrated with the main Kloudtrack API to fetch, cache, and display real-time weather data.",
+            "Implemented interactive charts and maps for enhanced data visualization.",
+            "Managed backend services with Node.js and Express, ensuring efficient data handling.",
+        ],
+        "link": "",
+        isFeatured: true
     }
 ];

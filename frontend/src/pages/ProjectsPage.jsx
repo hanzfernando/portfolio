@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PageNavigation from '../components/PageNavigation';
 import ProjectShowcase from '../components/ProjectShowcase';
-import projects from '../assets/data/projects.json';
+import { projects } from '../assets/data/projects';
 import BurgerNav from '../components/BurgerNav';
 import { tagBadges } from '../assets/data/tagBadges';
 // eslint-disable-next-line no-unused-vars
@@ -10,9 +10,14 @@ import { motion } from 'framer-motion';
 const ProjectsPage = () => {
   const [selectedTag, setSelectedTag] = useState(null);
 
+  const baseProjects = projects.filter((project) => project.isFeatured);  
+
   const filteredProjects = selectedTag
-    ? projects.filter((project) => project.tags?.includes(selectedTag))
-    : projects;
+    ? projects.filter((project) => 
+        project.isFeatured && 
+        project.tags?.some(tagBadge => tagBadge === tagBadges[selectedTag])
+      )
+    : projects.filter((project) => project.isFeatured);
 
   const handleTagClick = (tag) => {
     setSelectedTag(selectedTag === tag ? null : tag);
@@ -48,25 +53,30 @@ const ProjectsPage = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-wrap mt-5 gap-3 px-5"
         >
-          {Object.keys(tagBadges).map((tag, index) => {
-            const selected = selectedTag === tag;
-            return (
-              <img
-                key={index}
-                src={tagBadges[tag]}
-                alt={tag}
-                onClick={() => handleTagClick(tag)}
-                className={`cursor-pointer transition-transform duration-150 ease-in-out
-                  ${
-                    selected
-                      ? 'scale-110 ring-2 ring-blue-400 rounded-md'
-                      : 'hover:scale-105'
-                  }
-                `}
-              />
-            );
-          })}
+          {Object.keys(tagBadges)
+            .filter((tag) =>
+              baseProjects.some((project) => project.tags.includes(tagBadges[tag]))
+            )
+            .map((tag, index) => {
+              const selected = selectedTag === tag;
+              return (
+                <img
+                  key={index}
+                  src={tagBadges[tag]}
+                  alt={tag}
+                  onClick={() => handleTagClick(tag)}
+                  className={`cursor-pointer transition-transform duration-150 ease-in-out
+                    ${
+                      selected
+                        ? 'scale-110 ring-2 ring-blue-400 rounded-md'
+                        : 'hover:scale-105'
+                    }
+                  `}
+                />
+              );
+            })}
         </motion.div>
+
 
         {/* Project Showcase */}
         <motion.div

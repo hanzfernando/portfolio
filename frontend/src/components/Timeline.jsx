@@ -38,7 +38,7 @@ const FadingTimelineCard = ({ opacity, delay, label = "Future Possibilities", de
       transition={{ duration: 0.6, delay }}
       className="relative mb-8 sm:mb-12"
     >
-      <div className="bg-[var(--color-surface)] rounded-2xl p-4 sm:p-6 shadow-sm border-2 border-dashed border-[var(--color-border)] opacity-80">
+      <div className="bg-[var(--color-surface)] rounded-md p-4 sm:p-6 shadow-sm border-2 border-dashed border-[var(--color-border)] opacity-80">
         <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
           <div className="bg-gray-300 p-2 sm:p-3 rounded-lg shadow-sm flex-shrink-0">
             <FaBriefcase className="w-5 h-5 sm:w-6 sm:h-6 text-white/80" />
@@ -92,9 +92,9 @@ const Timeline = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="relative mb-8 sm:mb-12"
+              className="relative mb-4 sm:mb-6"
             >
-              <div className="bg-[var(--color-surface)] rounded-2xl p-4 sm:p-6 shadow-lg border border-[var(--color-border)] hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-[var(--color-surface)] rounded-md p-4 sm:p-6 shadow-lg border border-[var(--color-border)] hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
                   <div
                     className={`${item.color} p-2 sm:p-3 rounded-lg shadow-md flex-shrink-0`}

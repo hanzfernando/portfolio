@@ -7,6 +7,12 @@ const ProjectShowcase = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const handleClose = () => setSelectedProject(null);
 
+  // Helper function to get tag name from badge URL
+  const getTagNameFromBadge = (badgeUrl) => {
+    const entry = Object.entries(tagBadges).find(([, url]) => url === badgeUrl);
+    return entry ? entry[0] : null;
+  };
+
   const Card = ({ project, onClick, isActive }) => (
     <div
       onClick={onClick}
@@ -37,9 +43,10 @@ const ProjectShowcase = ({ projects }) => {
       </div>
 
       <div className="absolute bottom-3 right-3 bg-black/60 px-2 py-1 rounded-lg z-10 max-w-[85%] flex flex-wrap gap-1 overflow-hidden">
-        {project.tags?.slice(0, 3).map((tag, i) => (
-          <TagBadge key={i} text={tag} />
-        ))}
+        {project.tags?.slice(0, 3).map((badgeUrl, i) => {
+          const tagName = getTagNameFromBadge(badgeUrl);
+          return <TagBadge key={i} text={tagName || badgeUrl} />;
+        })}
         {project.tags?.length > 3 && (
           <TagBadge
             text={`+${project.tags.length - 3} more`}
@@ -56,7 +63,7 @@ const ProjectShowcase = ({ projects }) => {
   return (
     <>
       {selectedProject ? (
-        <div className="flex flex-col md:flex-row border-t border-border min-h-[70vh]">
+        <div className="flex flex-col md:flex-row border-t border-border min-h-[70vh] mt-8">
           {/* Project List */}
           <div className="w-full md:w-2/5 border-b md:border-b-0 md:border-r border-border p-4">
               <div
@@ -93,13 +100,12 @@ const ProjectShowcase = ({ projects }) => {
             </h2>
 
             <div className="flex flex-wrap gap-2 mb-3">
-              {selectedProject.tags?.map((tag, i) => {
-                const badgeUrl = tagBadges[tag];
+              {selectedProject.tags?.map((badgeUrl, i) => {
                 return (
                   <TagBadge
                     key={i}
-                    text={badgeUrl || tag}
-                    variant={badgeUrl ? "shield" : "detail"}
+                    text={badgeUrl}
+                    variant="shield"
                   />
                 );
               })}
@@ -126,11 +132,14 @@ const ProjectShowcase = ({ projects }) => {
             {selectedProject.link && (
               <a
                 href={selectedProject.link}
-                className="text-brand hover:text-brandHover hover:underline"
+                className="inline-flex items-center gap-2 px-1 text-foreground font-medium rounded-lg hover:bg-brandHover transition-all duration-300 hover:shadow-lg hover:scale-105"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Visit Project
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </a>
             )}
           </div>

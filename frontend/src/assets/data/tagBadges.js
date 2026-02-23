@@ -31,7 +31,7 @@ export const tagBadges = {
   // 'Postman': 'https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white&style=for-the-badge',
 
   // Cloud / Hosting
-  // 'AWS': 'https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white&style=for-the-badge',
+  'AWS': 'https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white&style=for-the-badge',
   'Vercel': 'https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white&style=for-the-badge',
   'Render': 'https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=black&style=for-the-badge',
 

@@ -170,35 +170,52 @@ export const projects = [
     {
         "id": 10,
         "title": "Kloudtech - Kloudtrack",
-        "tags": [tagBadges['Web'], tagBadges['React'], tagBadges['Tailwind CSS'], tagBadges['Node.js'], tagBadges['Express'], tagBadges['PostgreSQL'], tagBadges['AWS']],
+        "tags": [
+            tagBadges['Web'],
+            tagBadges['React'],
+            tagBadges['Tailwind CSS'],
+            tagBadges['Node.js'],
+            tagBadges['Express'],
+            tagBadges['PostgreSQL'],
+            tagBadges['AWS']
+        ],
         "thumbnail": "/img_showcase/img_placeholder.jpg",
         "images": [],
-        "shortDescription": "A web application for managing weather stations and visualizing real-time weather data.",
-        "description": "Kloudtrack web application allows Kloudtech Corp to manage weather stations and allow clients visualize real-time weather data through interactive charts and maps. It features user authentication, station management, and data visualization using recharts. The backend is built with Node.js and Express, while PostgreSQL is database. The application is hosted on AWS using EC2, S3, and RDS.",
+        "shortDescription": "An internal monitoring system for managing weather stations and visualizing real-time environmental data across multiple LGU command centers.",
+        "description": "Kloudtrack is a production-grade monitoring platform used by Kloudtech Corp and deployed across 5+ LGU command centers. The system processes 11,000+ weather data records daily with per-minute ingestion and provides real-time visualization through interactive charts and station-based mapping.\n\nI worked across the full stack — building backend APIs, optimizing data processing pipelines, and developing responsive dashboards for operational monitoring. I also improved performance on chart-heavy pages, reducing re-render times by up to 80% through better state management and memoization strategies. ",
         "learningPoints": [
-            "Gained experience in full-stack development using React for frontend and Node.js with Express for backend.",
-            "Implemented several key features including data visualization using recharts, backend data processing, api creation and management for external client developers.",
-            "Hands-on experience with AWS services such as EC2 for hosting, S3 for storage, and RDS for database management.",
-            "Collaborated with a team to integrate frontend and backend components effectively."
-        ],
+          "Designed and maintained REST APIs used by internal systems and external client developers.",
+          "Implemented API key authentication and request validation to secure external data access.",
+          "Processed and handled 11k+ weather data records daily with per-minute ingestion.",
+          "Reduced chart-heavy dashboard re-render time by up to 80% through memoization and optimized state management.",
+          "Identified backend performance bottlenecks and improved query efficiency and response times.",
+      ],
         "link": "",
-        isFeatured: true
+        "isFeatured": true
     },
     {
         "id": 11,
         "title": "Kloudtech Public Kloudtrack",
-        "tags": [tagBadges['Web'], tagBadges['Next.js'], tagBadges['Tailwind CSS'], tagBadges['Node.js'], tagBadges['Express'], tagBadges['PostgreSQL'], tagBadges['AWS']],
-        "thumbnail": "/img_showcase/img_placeholder.jpg",
-        "images": [],
-        "shortDescription": "A public-facing web application for visualizing weather data from Kloudtech's weather stations.",
-        "description": "The public Kloudtrack web application allows general users to visualize weather data collected from Kloudtech Corp's weather stations. It features interactive charts and maps to display real-time weather information. This application uses the API created in the main Kloudtrack application to fetch and display data.",
-        "learningPoints": [
-            "Developed a public-facing web application using Next.js and Tailwind CSS for responsive and modern UI.",
-            "Integrated with the main Kloudtrack API to fetch, cache, and display real-time weather data.",
-            "Implemented interactive charts and maps for enhanced data visualization.",
-            "Managed backend services with Node.js and Express, ensuring efficient data handling.",
+        "tags": [
+            tagBadges['Web'],
+            tagBadges['Next.js'],
+            tagBadges['Tailwind CSS'],
+            tagBadges['Node.js'],
+            tagBadges['Express'],
+            tagBadges['PostgreSQL'],
+            tagBadges['AWS']
         ],
-        "link": "",
-        isFeatured: true
+        "thumbnail": "/img_showcase/img_showcase-kloudtrack.png",
+        "images": [],
+        "shortDescription": "A public-facing platform for visualizing real-time weather data from Kloudtech's nationwide station network.",
+        "description": "The Public Kloudtrack platform allows general users to access and visualize real-time environmental data collected from Kloudtech's weather stations. Built with Next.js, the application consumes APIs from the internal Kloudtrack system and presents live data through interactive charts and geospatial mapping.\n\nI focused on building a performant and responsive frontend, implementing efficient data fetching and caching strategies to ensure smooth real-time updates. The system was designed to remain lightweight while handling frequent API polling and data refreshes.",
+        "learningPoints": [
+            "Built a public-facing Next.js application that consumes secured internal APIs.",
+            "Implemented efficient data fetching and caching strategies for real-time weather visualization.",
+            "Designed responsive dashboards with interactive charts and geospatial mapping.",
+            "Optimized client-side rendering to handle frequent data updates smoothly."
+        ],
+        "link": "https://citizen.kloudtechsea.com/",
+        "isFeatured": true
     }
 ];
